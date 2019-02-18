@@ -8,6 +8,7 @@
   background: gray;
   position: fixed;
   width: 100vw;
+  height: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -19,6 +20,11 @@
   color: white;
   padding: 10px 20px;
   border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+.nav-item:hover {
+  transform: scale(1.4);
 }
 
 .nav-icon {
