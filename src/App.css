@@ -1,12 +1,14 @@
 .App {
-  text-align: center;
+  display: flex;
 }
 
 /* NAV */
 .nav-container {
   list-style: none;
-  background: gray;
-  /* position: fixed; */
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
   height: 40px;
   display: flex;
   flex-direction: row;
@@ -36,17 +38,19 @@
   position: absolute;
   display: none;
   width: 100px;
-  margin: 9em 0 0 -3em;
+  margin: 8em 0 0 -3em;
   text-align: center;
   opacity: 0.5;
   list-style-type: none;
 }
 
 .nav-menu li {
-  padding: 15px 0;
+  padding: 10px 0;
   font-size: 20px;
   border: 1px black solid;
   margin: 2px 0;
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
 }
 
 input {
@@ -69,6 +73,7 @@ input[type='checkbox']:checked ~ .nav-menu {
   width: 35px;
   border: 1px black solid;
   background: black;
+  opacity: 0.6;
   border-radius: 5px;
   margin-bottom: 5px;
 }
@@ -91,6 +96,54 @@ input[type='checkbox']:checked ~ .nav-menu {
     display: flex;
     flex-direction: column;
   }
+  .header-container h1 {
+    top: 0%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .nav-toggle {
+    margin-left: 77vw;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .nav-toggle {
+    margin-left: 70vw;
+  }
 }
 
 /* HEADER */
+
+.header-container {
+  margin-top: 0;
+  /* padding-top: 40px; */
+  position: relative;
+}
+
+#header-img {
+  width: 100vw;
+  height: 100%;
+}
+
+.header-container h1 {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  color: white;
+  font-size: 4rem;
+}
+
+.header-container p {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  text-align: left;
+  color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  .header-container h1 {
+    top: 0%;
+  }
+}
